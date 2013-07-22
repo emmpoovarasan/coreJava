@@ -20,6 +20,7 @@ public class ImportPackages {
 		
 		System.out.println("Is firstDate before secondDate "+firstDate.before(secondDate));
 		System.out.println("Is firstDate after secondDate "+firstDate.after(secondDate));
+		System.out.println(calendar.getTime()+"\n"+calendar.getInstance().getTime());
 
 	}
 
