@@ -10,10 +10,10 @@ public class HumanBeingProgram extends Animal {
 		HumanBeing me = new HumanBeing();
 		output(me);
 		
-		HumanBeing colorgen = new HumanBeing("green", "other");
+		HumanBeing colorgen = new HumanBeing("green", "female");
 		output(colorgen);
 		
-		HumanBeing you = new HumanBeing("red", "female", "Lina");
+		HumanBeing you = new HumanBeing("black", "female", "Lina");
 		output(you);
 		
 	}

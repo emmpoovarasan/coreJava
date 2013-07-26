@@ -8,7 +8,7 @@ public class HumanBeing extends Animal{
 	}
 	public HumanBeing(String eyeColor, String sex){
 		super(eyeColor, sex);
-		this.name="pipe";
+		this.name="cat";
 	}
 	public HumanBeing(String eyColor, String sex, String name){
 		super(eyColor, sex);
