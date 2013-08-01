@@ -1,6 +1,7 @@
 package com.tutorialspoint.decisionmaking;
 
 public abstract class DecisionMakingStatements {
+
 protected abstract void printDecisionMaking(String decisionName);
 	/**
 	 * @param args
@@ -25,6 +26,7 @@ protected abstract void printDecisionMaking(String decisionName);
 		
 		SwitchClass sc = new SwitchClass();
 		sc.printDecisionMaking("Switch Statement");
+		
 	}
 
 }
