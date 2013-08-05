@@ -1,7 +1,25 @@
 package com.tutorialspoint.arrays;
 
 public class ArraysTest {
-
+		//Passing Arrays to Methods:
+		public static void printArray(double[] array){
+			for(int i=0; i<array.length;i++){
+				System.out.println("Passing Arrays to Methods:"+array[i]);
+			}
+		}
+		
+		//Returning an Array from a Method:
+		
+		public static double[] reverse(double[] list){
+			double[] result = new double[list.length];
+			
+			for(int i=0, j = result.length-1; i < list.length; i++, j--){
+				result[j] = list[i];
+				//System.out.println("Testing"+result[j]);
+			}
+			return result;
+		}
+		
 	/**
 	 * @param args
 	 */
@@ -34,6 +52,15 @@ public class ArraysTest {
 			System.out.println("Enhanced for loop : " + element);
 		}
 		
+		//call Passing Arrays to Method:
+		printArray(myList);
+		
+		//call Returning an Array from a Method:
+		//System.out.println("call Returning an Array from a Method: "+reverse(myList));
+		double[] myList1 = reverse(myList);
+		for(double myElement : myList1){
+			System.out.println("call Returning an Array from a Method: "+myElement);
+		}
 		
 	}
 
