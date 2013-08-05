@@ -20,6 +20,28 @@ public class ArraysTest {
 			return result;
 		}
 		
+		public static boolean equals(double[] a, double[] b){
+			boolean result = false;
+			if(a.length == b.length){
+				System.out.println("Both Arrays are equals a[i] == b[j] = a["+a.length+"],b["+b.length+"]");
+				result = true;
+				if(a.length == b.length){
+					for(int i = 0, j = 0; i < a.length; i++, j++){
+						if (a[i] == b[j]){ 
+							System.out.println("Values are equal for both Arrays a[i] == b[j] = a["+a[i]+"],b["+b[j]+"]");
+							result = true;
+						}else{
+							System.out.println("Values are not equal for both Arrays a[i] != b[j] = a["+a[i]+"],b["+b[j]+"]");
+							result = false;
+						}
+					}
+				}
+			}else{
+				System.out.println("Values are not equal for both Arrays a[i] != b[j] = a["+a.length+"],b["+b.length+"]");
+				result = false;
+			}
+			return result;
+		}
 	/**
 	 * @param args
 	 */
@@ -62,6 +84,20 @@ public class ArraysTest {
 			System.out.println("call Returning an Array from a Method: "+myElement);
 		}
 		
+		// check equals method using overloading
+		double[] myList2 = {1.3,1.4,1.5,2.0};
+		System.out.println(equals(myList, myList2));
+		
 	}
-
 }
+/*
+ SN	Methods with Description
+1	public static int binarySearch(Object[] a, Object key)
+Searches the specified array of Object ( Byte, Int , double etc) for the specified value using the binary search algorithm. The array must be sorted prior to making this call. This returns index of the search key, if it is contained in the list; otherwise, (-(insertion point + 1).
+2	public static boolean equals(long[] a, long[] a2)
+Returns true if the two specified arrays of longs are equal to one another. Two arrays are considered equal if both arrays contain the same number of elements, and all corresponding pairs of elements in the two arrays are equal. This returns true if the two arrays are equal. Same method could be used by all other premitive data types ( Byte, short, Int etc.)
+3	public static void fill(int[] a, int val)
+Assigns the specified int value to each element of the specified array of ints. Same method could be used by all other premitive data types ( Byte, short, Int etc.)
+4	public static void sort(Object[] a)
+Sorts the specified array of objects into ascending order, according to the natural ordering of its elements. Same method could be used by all other premitive data types ( Byte, short, Int etc.) 
+*/
