@@ -1,8 +1,7 @@
 package com.tutorialspoint.filesandio;
 
-import java.io.File;
-import java.io.IOException;
-import java.io.InputStream;
+import java.io.*;
+
 
 public class FileInputStream {
 
@@ -12,9 +11,26 @@ public class FileInputStream {
 	 */
 	public static void main(String[] args) throws IOException {
 		// TODO Auto-generated method stub
-		File f = new File("E:\\fileinputstream.txt");
-		InputStream f1 = new java.io.FileInputStream(f);
+
+		String str;
+		// crate new file
+		File f = new File("E:\\test.txt");
+		// declare input stream using for giving input
+		DataInputStream in = new DataInputStream(System.in);
+		// once create it does not show. you need to write something on the test file then only you can see.
+		// using for write ouput
+		DataOutputStream out = new DataOutputStream(new FileOutputStream(f));
+		// write text into the declared file using direct
+		out.writeBytes("Testing\n");
+		out.writeChars("Testing\n");
+		out.writeUTF("Testing");
 		
+		//out.write(in.readByte());
+		// write text into declared file.
+		do{
+			str = in.readLine();
+			out.writeBytes(str);
+		}while(!str.equals(" "));
 		
 	}
 
