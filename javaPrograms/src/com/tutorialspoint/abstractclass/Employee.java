@@ -12,10 +12,7 @@ public abstract class Employee {
 		this.number=number;
 	}
 	
-	public double computePay(){
-		System.out.println("Inside Employee computePay()");
-		return 0.0;
-	}
+	public abstract double computePay();
 	
 	public void mailCheck(){
 		System.out.println("Mailing a check to " + this.name

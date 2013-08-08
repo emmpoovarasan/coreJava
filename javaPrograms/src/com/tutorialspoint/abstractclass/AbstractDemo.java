@@ -26,6 +26,7 @@ public class AbstractDemo {
 
 	    System.out.println("\n Call mailCheck using Employee reference--");
 	    e.mailCheck();
+	    System.out.println("Return value of computePay() is salary/52 "+e.computePay());
 	      
 
 	}

@@ -25,10 +25,16 @@ public class Salary extends Employee{
 	          salary = newSalary;
 	       }
 	   }
-	   public double computePay()
+	   @Override
+		public double computePay() {
+			// TODO Auto-generated method stub
+		   System.out.println("Computing salary pay for " + getName());
+		   return salary/52;
+		}
+	   /*public double computePay()
 	   {
 	      System.out.println("Computing salary pay for " + getName());
 	      return salary/52;
-	   }
+	   }*/
 
 }
