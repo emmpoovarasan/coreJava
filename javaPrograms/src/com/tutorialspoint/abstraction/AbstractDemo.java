@@ -1,4 +1,4 @@
-package com.tutorialspoint.abstractclass;
+package com.tutorialspoint.abstraction;
 
 public class AbstractDemo {
 

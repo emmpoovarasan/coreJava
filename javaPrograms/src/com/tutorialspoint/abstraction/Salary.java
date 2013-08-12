@@ -1,4 +1,4 @@
-package com.tutorialspoint.abstractclass;
+package com.tutorialspoint.abstraction;
 
 public class Salary extends Employee{
 	private double salary; //Annual salary
