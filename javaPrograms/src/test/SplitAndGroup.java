@@ -26,6 +26,7 @@ public class SplitAndGroup {
 			while ((line = br.readLine())!=null) {
 				String[] gett = line.split(csvSplitBy);
 				System.out.println("CSV FILE date["+gett[0]+"]-Open["+gett[1]+"]");
+				System.out.println(gett[0]+gett[1]+gett[2]);
 			}
 		} catch (Exception e) {
 			// TODO: handle exception
