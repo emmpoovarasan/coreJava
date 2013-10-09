@@ -1,12 +1,15 @@
 package test;
 
+import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.PrintWriter;
+import java.io.Reader;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
@@ -68,6 +71,34 @@ public class Room {
 	public static void main(String[] args) {
 		// Class initilize
 		Room rm = new Room();
+		File fl = new File("E:\\Room.txt");
+		if(!fl.exists()){
+			try {
+				fl.createNewFile();
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+		
+		FileReader fr;
+		try {
+			fr = new FileReader(fl);
+			BufferedReader br = new BufferedReader(fr);
+			String line;
+			while((line = br.readLine()) != null){
+				System.out.println("Reading : "+line);	
+			}
+			br.close();
+		} catch (FileNotFoundException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		
 		/**
 		 * this below code is working file
 		 */
@@ -143,6 +174,7 @@ public class Room {
 			}
 			//writer.append(storeValues.toString());
 			System.out.println("Done Iterator!!!");
+			writer.flush();
 			writer.close();
 			
 			
